@@ -6,4 +6,7 @@
     <!-- <h2 *ngIf="age >= 15">Bạn đã đủ 15 tuổi</h2>
     <h2 *ngIf="age < 15">Bạn chưa đủ 15 tuổi</h2> -->
     <button (click)="resetName()">Reset tên</button>
+    <div *ngFor="let trai of traiCay; let i = index">
+        <li>{{i+1}}.{{trai}}</li>
+    </div>
 </div>

@@ -1,12 +1,15 @@
-<p>about works!</p>
-<!-- <ul [ngSwitch]="loginName">
+<p appHighlight>about works!</p>
+<p [appHighlight] = "myColor">about works!</p>
+<p [appHighlight] = "'green'">about works!</p>
+<ul [ngSwitch]="loginName">
     <li *ngSwitchCase="'user'">
         <p>User is logged in..</p>
     </li>
     <li *ngSwitchCase="'admin'">
         <p>Admin is logged in..</p>
+        <app-home></app-home>
     </li>
     <li *ngSwitchDefault>
         <p>Please choose login name</p>
     </li>
-</ul> -->
+</ul>

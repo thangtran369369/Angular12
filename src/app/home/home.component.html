@@ -9,7 +9,7 @@
     <div *ngFor="let trai of traiCay; let i = index">
         <li>{{i+1}}.{{trai}}</li>
     </div>
-    <table class="table">
+    <!-- <table class="table">
         <tr>
           <th>thu tu</th>
           <th>Ten</th>
@@ -23,8 +23,19 @@
             <span [ngClass]="{'so-am':trai.gia < 0}">{{trai.gia | currency:'VND':'symbol':'1.2'}}</span>
           </td>
           <td>
-            <span>{{trai.hagia | onSale}}</span>
+            <span>{{trai.hagia | onSale | uppercase}}</span>
           </td>
         </tr>
-      </table>
+      </table> -->
+      Tỉnh/Thành phố
+      <select name="cars" id="city" (change)="changeCity($event)">
+        <option *ngFor="let data of vietnamData" value="{{data.city}}">
+          {{data.city}}
+        </option>
+      </select>
+      <br />
+      Quận/Huyện
+      <select name="cars" id="district">
+        <option *ngFor="let district of districts"  value="{{district}}">{{district}}</option>
+      </select>
 </div>

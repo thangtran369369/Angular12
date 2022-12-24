@@ -11,4 +11,8 @@ export class CommonService {
   public binhphuong(n: number): number {
     return n*n;
   }
+
+  public submitData(data:any) : void {
+    console.log('gui data len server. Data = ',data);
+  }
 }
